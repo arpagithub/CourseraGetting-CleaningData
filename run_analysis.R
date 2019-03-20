@@ -117,4 +117,4 @@ names(extract_mean_std) <- gsub("^angle", "Angle ", names(extract_mean_std))
 tidy_extract_mean_std_data <- ddply(extract_mean_std,c("subject","Type"), numcolwise(mean))
 
 ## write the data to a txt file
-write.table(tidy_extract_mean_std_data,file = "tidy_data_r_analysis.txt")
+write.table(tidy_extract_mean_std_data,file = "tidy_data_r_analysis.txt", row.name=FALSE)
