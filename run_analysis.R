@@ -5,10 +5,7 @@
 #####
 
 ##Defining Library for the program
-library(curl)
-library(RCurl)
 library(dplyr)
-library(lubridate)
 library(tidyr)
 library(plyr)
 
@@ -121,6 +118,3 @@ tidy_extract_mean_std_data <- ddply(extract_mean_std,c("subject","Type"), numcol
 
 ## write the data to a txt file
 write.table(tidy_extract_mean_std_data,file = "tidy_data_r_analysis.txt")
-
-##library(knitr)
-###knit2html("codebook.Rmd")
